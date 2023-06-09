@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(59, 59, 95);
+    color: #fff;
+    text-align:  center;
+}
+.table1{
+    text-align: center;
+    border: 1px;
+}
+table{
+    text-align: center;
+}
+.add{
+    background-color: rgb(46, 92, 107);
+    color: #fff;
+}
+.back{
+    background-color: #8c74fc;
+    color: black;
+    padding: 2px;
+    border-radius: 2px;
+    text-decoration: none;
+}
