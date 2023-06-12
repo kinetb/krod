@@ -1,3 +1,17 @@
+<?php
+require "connection.php";
+
+
+if(isset($_POST['add'])){
+  $name = $_POST['name'];
+  $age = $_POST['age']; 
+  $gender = $_POST['gender'];
+
+  $sql = "INSERT INTO information_db(`full_name`, `age`, `gender`) VALUES('$name', '$age', '$gender')";
+  $conn->query($sql);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

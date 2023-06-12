@@ -1,10 +1,14 @@
 <?php
-require "connection.php"
+require "connection.php";
 
-
+$sql = "SELECT * FROM information";
+$content = $con->query($sql);
+$table = $content->fetch_assoc();
 
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,7 @@ require "connection.php"
 <body>
     <h1>RECORDS</h1>
     <a href="adduser.php" class="add">Add</a>
-    <table class="table1">
+    <table>
         <thead>
             <tr>
                 <th>Username</th>
@@ -27,6 +31,29 @@ require "connection.php"
                 <th>Gender</th>
             </tr>
         </thead>
+        <tbody>
+            <?php if($content->num_rows){ ?>
+
+                <?php do {?>
+                    <tr>
+                        <td><?php echo $table['username']?></td>
+                        <td><?php echo $table['email']?></td>
+                        <td><?php echo $table['password']?></td>
+                        <td><?php echo $table['mobile number']?></td>
+                        <td><?php echo $table['gender']?></td>
+                        <td>
+                        <form action="delete.php" method="post">
+                            <a href="edit.php?id= <?php echo $table['id']?>" >Edit</a>
+                            <button type="submit" name="delete">Delete</button>
+                            <input type="hidden" name="erase" value="<?php echo $table['id']?>">
+                        </form>
+                        </td>
+    
+                    </tr>
+                    <?php }while($table = $content->fetch_assoc())?>
+
+            <?php } ?>
+        </tbody>
         
 
   </table>

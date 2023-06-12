@@ -1,7 +1,6 @@
-<!-- <?php
+<?php
 
-// $con=
+$con = new mysqli("localhost","root", "", "crud");
 
 
-
-?> -->
+?>

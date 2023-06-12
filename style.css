@@ -3,12 +3,11 @@ body{
     color: #fff;
     text-align:  center;
 }
-.table1{
-    text-align: center;
-    border: 1px;
-}
+
 table{
     text-align: center;
+    width: 100%;
+
 }
 .add{
     background-color: rgb(46, 92, 107);
