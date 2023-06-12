@@ -29,6 +29,7 @@ $table = $content->fetch_assoc();
                 <th>Password</th>
                 <th>Mobile Number</th>
                 <th>Gender</th>
+                <th>Operation</th>
             </tr>
         </thead>
         <tbody>
@@ -39,7 +40,7 @@ $table = $content->fetch_assoc();
                         <td><?php echo $table['username']?></td>
                         <td><?php echo $table['email']?></td>
                         <td><?php echo $table['password']?></td>
-                        <td><?php echo $table['mobile number']?></td>
+                        <td><?php echo $table['mobile_number']?></td>
                         <td><?php echo $table['gender']?></td>
                         <td>
                         <form action="delete.php" method="post">
