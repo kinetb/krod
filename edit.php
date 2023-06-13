@@ -2,32 +2,48 @@
 require "connection.php";
 
 
+$id = $_GET['id'];
+$sql = "SELECT * FROM `information` WHERE id = '$id'";
+$content = $con->query($sql);
+$table = $content->fetch_assoc();
+// echo 'goods';
+
+
+
+
 if(isset($_POST['addbutton'])){;
 
-   $username = $_POST['username'];
-   $email = $_POST['email']; 
-   $password = $_POST['password']; 
-   $mobilenumber = $_POST['mobilenumber']; 
-   $gender = $_POST['gender'];
+    $username = $_POST['username'];
+    $email = $_POST['email']; 
+    $password = $_POST['password']; 
+    $mobilenumber = $_POST['mobilenumber']; 
+    $gender = $_POST['gender'];
 
-  $sql = "INSERT INTO `information` (`username`, `email`, `password`, `mobile_number`, `gender`) VALUES('$username', '$email', '$password', '$mobilenumber', '$gender')";
-  $con->query($sql);
+    $sql = "UPDATE `information` SET `username`='$username',`email`='$email',`password`='$password',`mobile_number`='$mobilenumber',`gender`='$gender' WHERE id = '$id'";
+    $con->query($sql);
 
-  header ("location: index.php");
+
+    header("location: index.php?=" .$id);
+
+
+}else if(isset($_POST['cancel'])){
+    header("location: index.php?=" .$id);
+    
 }
 
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Edit yarn</title>
 </head>
 <body>
-    <h1>ADD USER</h1>
+<h1>ADD USER</h1>
 <form method="post">
   <div class="mb-3">
     <label for="InputUname" class="form-label">Username</label>   
@@ -63,6 +79,6 @@ if(isset($_POST['addbutton'])){;
 <br><br>
 <a href="index.php" class="back">Back</a>
 
+    
 </body>
-
 </html>

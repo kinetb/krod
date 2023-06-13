@@ -44,7 +44,7 @@ $table = $content->fetch_assoc();
                         <td><?php echo $table['gender']?></td>
                         <td>
                         <form action="delete.php" method="post">
-                            <a href="edit.php?id= <?php echo $table['id']?>" >Edit</a>
+                            <a href="edit.php?id= <?php echo $table['id']?>" class="edit" >Edit</a>
                             <button type="submit" name="delete">Delete</button>
                             <input type="hidden" name="erase" value="<?php echo $table['id']?>">
                         </form>

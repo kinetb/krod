@@ -13,6 +13,11 @@ table{
 th, td {
     border: 1px solid;
 }
+.edit {
+    background-color: rgb(138, 56, 1);
+    color: #fff;
+    padding: 2px;
+}
 .add{
     background-color: rgb(46, 92, 107);
     color: #fff;
