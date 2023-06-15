@@ -6,7 +6,11 @@ body{
 
 table{
     text-align: center;
-    width: 100%;
+    margin-left: 320px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 50%;
     border: 1px solid;
 
 }
@@ -14,18 +18,50 @@ th, td {
     border: 1px solid;
 }
 .edit {
-    background-color: rgb(138, 56, 1);
-    color: #fff;
+    background-color: #ff7b00;
+    color: #000000;
     padding: 2px;
+}
+.delete {
+    background-color: lightcoral;
+    color: #000000;
+    padding: 2px;
+}
+.submit {
+    background-color: lightgreen;
+    color: #000000;
+    padding: 2px;
+    border-color: none;
 }
 .add{
     background-color: rgb(46, 92, 107);
     color: #fff;
 }
 .back{
-    background-color: #8c74fc;
+    background-color: #ff7b00;
     color: black;
-    padding: 2px;
+    padding: 3px;
     border-radius: 2px;
     text-decoration: none;
+}
+.addB{
+    cursor: pointer;
+    background-color: aqua;
+}
+.containeradd{
+    color: black;
+    position: absolute;
+    border:1px solid #fff;
+    height: 300px;
+    width: 300px;
+    top: 30vh;
+    background-color: #00ccff;
+    left: 0;
+    right: 0;
+    margin-inline: auto ;
+    display: none;
+    border-radius: 10px;
+}
+.addform{
+    margin-top: 30px;
 }

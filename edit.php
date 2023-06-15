@@ -43,7 +43,7 @@ if(isset($_POST['addbutton'])){;
     <title>Edit yarn</title>
 </head>
 <body>
-<h1>ADD USER</h1>
+<h1>EDIT</h1>
 <form method="post">
   <div class="mb-3">
     <label for="InputUname" class="form-label">Username</label>   
